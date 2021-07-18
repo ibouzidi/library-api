@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Book List</h1>
+    <h1>Liste des livres</h1>
     <div class="row">
       <BookDetails
           v-for="book in books"

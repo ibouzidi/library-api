@@ -1,18 +1,18 @@
 <template>
   <div>
-    <h1>Add Book</h1>
+    <h1>Ajouter un livre</h1>
     <div v-if="saved" class="alert alert-success" role="alert">
       Book saved
     </div>
     <div class="form-group">
       <label for="title">
-        Title
+        Titre du livre
       </label>
       <input type="text" class="form-control" id="title" v-model="title" @input="saved = false"/>
     </div>
     <div class="form-group">
       <label for="author">
-        Description
+        Auteur du livre
       </label>
       <input type="text" class="form-control" id="author" v-model="author" @input="saved = false"/>
     </div>

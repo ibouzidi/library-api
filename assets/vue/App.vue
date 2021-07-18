@@ -31,7 +31,7 @@
               to="/add-book"
               active-class="active"
           >
-            <a class="nav-link">Add Book</a>
+            <a class="nav-link">Ajouter un nouveau livre</a>
           </router-link>
         </ul>
       </div>
