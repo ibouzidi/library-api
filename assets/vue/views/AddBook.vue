@@ -4,6 +4,7 @@
     <div v-if="saved" class="alert alert-success" role="alert">
       Book saved
     </div>
+        <div class="col-md-6">
     <div class="form-group">
       <label for="title">
         Titre du livre
@@ -19,6 +20,7 @@
     <button class="btn btn-primary" @click="submit">
       Submit
     </button>
+  </div>
   </div>
 </template>
 <script>

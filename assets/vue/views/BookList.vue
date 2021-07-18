@@ -7,7 +7,7 @@
           :title="book.title"
           :author="book.author"
           :key="book.id"
-      />
+          />
     </div>
   </div>
 </template>
