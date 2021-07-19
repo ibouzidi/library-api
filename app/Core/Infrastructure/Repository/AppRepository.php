@@ -31,10 +31,11 @@ class AppRepository implements AppRepositoryInterface
     /**
      * @var string
      */
-    private $path = 'C:\xampp\htdocs\projetslim\library-api\data.json';
+    private $path;
     
     public function __construct()
     {   
+        $this->path = dirname(dirname(dirname(dirname(__DIR__)))) . DIRECTORY_SEPARATOR . 'data.json';
         $this->readFile();
     }
     /**

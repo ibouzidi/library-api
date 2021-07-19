@@ -14,10 +14,11 @@ class UserRepository implements UserRepositoryInterface
     /**
      * @var string
      */
-    private $path = 'C:\xampp\htdocs\projetslim\library-api\data.json';
+    private $path;
     
     public function __construct(AppRepositoryInterface $appRepository)
     {
+        $this->path = dirname(dirname(dirname(dirname(__DIR__)))) . DIRECTORY_SEPARATOR . 'data.json';
         $this->appRepository = $appRepository;
         $this->readFile();
     }
