@@ -22,10 +22,10 @@ export default new VueRouter({
         {
             path: "/add-user",
             component: AddUser
-        }
-        // {
-        //     path: "*",
-        //     redirect: "/books"
-        // },
+        },
+        {
+            path: "*",
+            redirect: "/books"
+        },
     ]
 })
