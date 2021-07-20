@@ -345,7 +345,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  name: \"BookDetails\",\n  props: [\"title\", \"author\"]\n});\n\n//# sourceURL=webpack:///./assets/vue/components/BookDetails.vue?./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _RemoveBookButton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RemoveBookButton */ \"./assets/vue/components/RemoveBookButton.vue\");\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  name: \"BookDetails\",\n  props: [\"title\", \"author\", \"entireBook\"],\n\n  data() {\n    return {\n      book: this.entireBook\n    };\n  },\n\n  components: {\n    RemoveBookButton: _RemoveBookButton__WEBPACK_IMPORTED_MODULE_0__.default\n  },\n  mounted: function () {}\n});\n\n//# sourceURL=webpack:///./assets/vue/components/BookDetails.vue?./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./assets/vue/components/RemoveBookButton.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./assets/vue/components/RemoveBookButton.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n//\n//\n//\n//\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  name: \"RemoveBookButton\",\n  props: [\"bookToRemove\"],\n\n  data() {\n    return {\n      book: this.bookToRemove\n    };\n  },\n\n  methods: {\n    removeBook() {\n      axios__WEBPACK_IMPORTED_MODULE_0___default().delete(\"/api/books/\" + this.book.id).then(response => console.log(response)).catch(error => console.log(error));\n      window.location.replace(\"/books\");\n    }\n\n  }\n});\n\n//# sourceURL=webpack:///./assets/vue/components/RemoveBookButton.vue?./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options");
 
 /***/ }),
 
@@ -389,7 +400,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_BookDetails__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/BookDetails */ \"./assets/vue/components/BookDetails.vue\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  name: \"BookList\",\n  components: {\n    BookDetails: _components_BookDetails__WEBPACK_IMPORTED_MODULE_0__.default\n  },\n\n  data() {\n    return {\n      books: []\n    };\n  },\n\n  created: function () {\n    axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/books').then(response => this.books = response.data);\n  }\n});\n\n//# sourceURL=webpack:///./assets/vue/views/BookList.vue?./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_BookDetails__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/BookDetails */ \"./assets/vue/components/BookDetails.vue\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  name: \"BookList\",\n  components: {\n    BookDetails: _components_BookDetails__WEBPACK_IMPORTED_MODULE_0__.default\n  },\n\n  data() {\n    return {\n      books: []\n    };\n  },\n\n  created: function () {\n    axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/books').then(response => this.books = response.data);\n  }\n});\n\n//# sourceURL=webpack:///./assets/vue/views/BookList.vue?./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options");
 
 /***/ }),
 
@@ -445,6 +456,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _BookDetails_vue_vue_type_template_id_7c576c17___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BookDetails.vue?vue&type=template&id=7c576c17& */ \"./assets/vue/components/BookDetails.vue?vue&type=template&id=7c576c17&\");\n/* harmony import */ var _BookDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BookDetails.vue?vue&type=script&lang=js& */ \"./assets/vue/components/BookDetails.vue?vue&type=script&lang=js&\");\n/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\n\n\n/* normalize component */\n;\nvar component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(\n  _BookDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,\n  _BookDetails_vue_vue_type_template_id_7c576c17___WEBPACK_IMPORTED_MODULE_0__.render,\n  _BookDetails_vue_vue_type_template_id_7c576c17___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = \"assets/vue/components/BookDetails.vue\"\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);\n\n//# sourceURL=webpack:///./assets/vue/components/BookDetails.vue?");
+
+/***/ }),
+
+/***/ "./assets/vue/components/RemoveBookButton.vue":
+/*!****************************************************!*\
+  !*** ./assets/vue/components/RemoveBookButton.vue ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _RemoveBookButton_vue_vue_type_template_id_44b91f11___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RemoveBookButton.vue?vue&type=template&id=44b91f11& */ \"./assets/vue/components/RemoveBookButton.vue?vue&type=template&id=44b91f11&\");\n/* harmony import */ var _RemoveBookButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RemoveBookButton.vue?vue&type=script&lang=js& */ \"./assets/vue/components/RemoveBookButton.vue?vue&type=script&lang=js&\");\n/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\n\n\n/* normalize component */\n;\nvar component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(\n  _RemoveBookButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,\n  _RemoveBookButton_vue_vue_type_template_id_44b91f11___WEBPACK_IMPORTED_MODULE_0__.render,\n  _RemoveBookButton_vue_vue_type_template_id_44b91f11___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = \"assets/vue/components/RemoveBookButton.vue\"\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);\n\n//# sourceURL=webpack:///./assets/vue/components/RemoveBookButton.vue?");
 
 /***/ }),
 
@@ -525,6 +547,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./assets/vue/components/RemoveBookButton.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./assets/vue/components/RemoveBookButton.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_RemoveBookButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./RemoveBookButton.vue?vue&type=script&lang=js& */ \"./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./assets/vue/components/RemoveBookButton.vue?vue&type=script&lang=js&\");\n /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_RemoveBookButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); \n\n//# sourceURL=webpack:///./assets/vue/components/RemoveBookButton.vue?");
+
+/***/ }),
+
 /***/ "./assets/vue/components/UserDetails.vue?vue&type=script&lang=js&":
 /*!************************************************************************!*\
   !*** ./assets/vue/components/UserDetails.vue?vue&type=script&lang=js& ***!
@@ -602,6 +635,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./assets/vue/components/RemoveBookButton.vue?vue&type=template&id=44b91f11&":
+/*!***********************************************************************************!*\
+  !*** ./assets/vue/components/RemoveBookButton.vue?vue&type=template&id=44b91f11& ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RemoveBookButton_vue_vue_type_template_id_44b91f11___WEBPACK_IMPORTED_MODULE_0__.render),\n/* harmony export */   \"staticRenderFns\": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RemoveBookButton_vue_vue_type_template_id_44b91f11___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)\n/* harmony export */ });\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RemoveBookButton_vue_vue_type_template_id_44b91f11___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./RemoveBookButton.vue?vue&type=template&id=44b91f11& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./assets/vue/components/RemoveBookButton.vue?vue&type=template&id=44b91f11&\");\n\n\n//# sourceURL=webpack:///./assets/vue/components/RemoveBookButton.vue?");
+
+/***/ }),
+
 /***/ "./assets/vue/components/UserDetails.vue?vue&type=template&id=d8568c16&":
 /*!******************************************************************************!*\
   !*** ./assets/vue/components/UserDetails.vue?vue&type=template&id=d8568c16& ***!
@@ -675,7 +719,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render),\n/* harmony export */   \"staticRenderFns\": () => (/* binding */ staticRenderFns)\n/* harmony export */ });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", { staticClass: \"col-sm-4\" }, [\n    _c(\"div\", { staticClass: \"card\" }, [\n      _c(\"div\", { staticClass: \"card-body\" }, [\n        _c(\"h5\", { staticClass: \"card-title\" }, [_vm._v(_vm._s(_vm.title))]),\n        _vm._v(\" \"),\n        _c(\"p\", { staticClass: \"card-text\" }, [_vm._v(_vm._s(_vm.author))])\n      ])\n    ])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./assets/vue/components/BookDetails.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render),\n/* harmony export */   \"staticRenderFns\": () => (/* binding */ staticRenderFns)\n/* harmony export */ });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", { staticClass: \"col-sm-4\" }, [\n    _c(\"div\", { staticClass: \"card\" }, [\n      _c(\n        \"div\",\n        { staticClass: \"card-body\" },\n        [\n          _c(\"h5\", { staticClass: \"card-title\" }, [_vm._v(_vm._s(_vm.title))]),\n          _vm._v(\" \"),\n          _c(\"p\", { staticClass: \"card-text\" }, [_vm._v(_vm._s(_vm.author))]),\n          _vm._v(\" \"),\n          _c(\"RemoveBookButton\", { attrs: { \"book-to-remove\": this.book } })\n        ],\n        1\n      )\n    ])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./assets/vue/components/BookDetails.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./assets/vue/components/RemoveBookButton.vue?vue&type=template&id=44b91f11&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./assets/vue/components/RemoveBookButton.vue?vue&type=template&id=44b91f11& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render),\n/* harmony export */   \"staticRenderFns\": () => (/* binding */ staticRenderFns)\n/* harmony export */ });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"button\",\n    { staticClass: \"btn btn-primary\", on: { click: _vm.removeBook } },\n    [_vm._v(\"Remove\")]\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./assets/vue/components/RemoveBookButton.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options");
 
 /***/ }),
 
@@ -719,7 +774,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render),\n/* harmony export */   \"staticRenderFns\": () => (/* binding */ staticRenderFns)\n/* harmony export */ });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", [\n    _c(\"h1\", [_vm._v(\"Liste des livres\")]),\n    _vm._v(\" \"),\n    _c(\n      \"div\",\n      { staticClass: \"row\" },\n      _vm._l(_vm.books, function(book) {\n        return _c(\"BookDetails\", {\n          key: book.id,\n          attrs: { title: book.title, author: book.author }\n        })\n      }),\n      1\n    )\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./assets/vue/views/BookList.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render),\n/* harmony export */   \"staticRenderFns\": () => (/* binding */ staticRenderFns)\n/* harmony export */ });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", [\n    _c(\"h1\", [_vm._v(\"Liste des livres\")]),\n    _vm._v(\" \"),\n    _c(\n      \"div\",\n      { staticClass: \"row\" },\n      _vm._l(_vm.books, function(book) {\n        return _c(\"BookDetails\", {\n          key: book.id,\n          attrs: { title: book.title, author: book.author, \"entire-book\": book }\n        })\n      }),\n      1\n    )\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./assets/vue/views/BookList.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options");
 
 /***/ }),
 

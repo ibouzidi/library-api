@@ -6,6 +6,7 @@
           v-for="book in books"
           :title="book.title"
           :author="book.author"
+          :entire-book="book"
           :key="book.id"
           />
     </div>

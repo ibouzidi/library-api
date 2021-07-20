@@ -70,4 +70,16 @@ class BookRepository implements BookRepositoryInterface
         });
     }
 
+
+    public function removeBook(string $id){
+
+        $this->books = array_filter($this->books, function ($book) use ($id){
+            return $book->getId() != $id;
+        });
+        $this->appRepository->setBooks($this->books);
+        $this->appRepository->writeFile();
+        
+        return $id;
+    }
+
 }

@@ -64,6 +64,7 @@ $app->addBodyParsingMiddleware();
 $app->get('/', [IndexController::class, 'index']);
 
 
+$app->delete('/api/books/{id}', [BookController::class, 'removeBook']);
 $app->get('/api/books', [BookController::class, 'listBooks']);
 $app->post('/api/books', [BookController::class, 'addBook']);
 
@@ -74,5 +75,6 @@ $app->get('/api/loans', [LoanController::class, 'listLoans']);
 $app->post('/api/loans', [LoanController::class, 'addLoan']);
 
 $app->get('/{sth}', [IndexController::class, 'index']);
+
 
 $app->run();

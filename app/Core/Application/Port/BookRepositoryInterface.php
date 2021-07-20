@@ -19,4 +19,6 @@ interface BookRepositoryInterface
      */
     public function addBook(string $title, string $author): Book;
 
+    public function removeBook(string $id);
+
 }
